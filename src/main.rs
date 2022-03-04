@@ -10,4 +10,7 @@ fn main() {
     let s2 = s1; // this is NOT copying the value of s1
     // instead the string "structure" (pointer, length, capacity)
     // of s1 is copied to s2, not the value
+
+    // To ensure memory safety after `let s2 = s1` s1 is considered no longer valid
+    println!("{}, world!", s1);
 }
