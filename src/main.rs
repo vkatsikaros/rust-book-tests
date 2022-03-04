@@ -7,10 +7,7 @@ fn main() {
     let y = x; // copy the value of x
 
     let s1 = String::from("Hello");
-    let s2 = s1; // this is NOT copying the value of s1
-    // instead the string "structure" (pointer, length, capacity)
-    // of s1 is copied to s2, not the value
+    let s2 = s1.clone(); // deep copy, the value of s1 is copied to s2
 
-    // To ensure memory safety after `let s2 = s1` s1 is considered no longer valid
-    println!("{}, world!", s1);
+    println!("s1 = {}, s2 = {}", s1, s2);
 }
