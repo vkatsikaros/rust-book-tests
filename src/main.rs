@@ -1,11 +1,19 @@
 fn main() {
     let s1 = String::from("Hello");
 
-    // TODO move s1 in a function
+    takes_ownership(s1);
+    // s1 value moved in function, so no longer valid
 
     let x = 5;
 
-    // TODO move x in a function
+    makes_copy(x);
+    // i32 implements Copy. x value is copied. So x is still valid
+}
 
-    println!("s1 = {}, s2 = {}", s1, s2);
+fn takes_ownership(something: String) {
+    println!("{}", something);
+}
+
+fn makes_copy(something: i32) {
+    println!("{}", something);
 }
