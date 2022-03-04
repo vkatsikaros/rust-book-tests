@@ -1,19 +1,19 @@
 fn main() {
-    let s1 = String::from("Hello");
+    let s1 = gives_ownership();
 
-    takes_ownership(s1);
-    // s1 value moved in function, so no longer valid
+    let s2 = String::from("Hello");
 
-    let x = 5;
-
-    makes_copy(x);
-    // i32 implements Copy. x value is copied. So x is still valid
+    let s3 = takes_and_give_back_ownership(s2);
 }
 
-fn takes_ownership(something: String) {
-    println!("{}", something);
+fn gives_ownership() -> String {
+    let something = String::from("Hello");
+    something
+    // something is returned and moves to the caller
 }
 
-fn makes_copy(something: i32) {
-    println!("{}", something);
+fn takes_and_give_back_ownership(something: String) -> String {
+    // something comes into scope
+    something
+    // something is returned and moves to the caller
 }
