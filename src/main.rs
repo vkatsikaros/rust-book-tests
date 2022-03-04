@@ -1,13 +1,11 @@
 fn main() {
-    let mut s = String::from("Hello");
-    s.push_str(", world!");
-    println!("{}", s);
+    let s1 = String::from("Hello");
+
+    // TODO move s1 in a function
 
     let x = 5;
-    let y = x; // copy the value of x
 
-    let s1 = String::from("Hello");
-    let s2 = s1.clone(); // deep copy, the value of s1 is copied to s2
+    // TODO move x in a function
 
     println!("s1 = {}, s2 = {}", s1, s2);
 }
