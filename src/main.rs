@@ -1,19 +1,14 @@
 fn main() {
-    let s1 = gives_ownership();
+    let s1 = String::from("Hello");
 
-    let s2 = String::from("Hello");
-
-    let s3 = takes_and_give_back_ownership(s2);
+    // refer to value s1 without taking ownership
+    let len = calculate_length(&s1);
+    println!("The lenght of '{}' is '{}'", s1, len);
 }
 
-fn gives_ownership() -> String {
-    let something = String::from("Hello");
-    something
-    // something is returned and moves to the caller
-}
-
-fn takes_and_give_back_ownership(something: String) -> String {
-    // something comes into scope
-    something
-    // something is returned and moves to the caller
+fn calculate_length(s: &String) -> usize {
+    // s is a reference to a String (its "structure" not the actual value)
+    s.len()
+    // s goes out of scope. It's a reference so it doesn't have ownership of
+    // the value, and nothing happens
 }
