@@ -1,12 +1,10 @@
 fn main() {
+    // Mutable references have one big restriction: you can have only
+    // one mutable reference to a particular piece of data at a time. 
     let mut s1 = String::from("Hello");
 
-    change(&mut s1);
-}
+    // create one mutable reference
+    let r1 = &mut s1;
 
-fn change(s: &mut String) {
-    // the function can mutate the value it borrows
-
-    // references are immutable, so this will throw an error
-    s.push_str(", world");
+    println!("{}", r1);
 }
