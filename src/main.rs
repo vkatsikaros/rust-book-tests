@@ -1,18 +1,12 @@
 fn main() {
-    let s1 = String::from("Hello");
+    let mut s1 = String::from("Hello");
 
-    // refer to value s1 without taking ownership
-    let len = calculate_length(&s1);
-    println!("The lenght of '{}' is '{}'", s1, len);
+    change(&mut s1);
 }
 
-fn calculate_length(s: &String) -> usize {
-    // s is a reference to a String (its "structure" not the actual value)
+fn change(s: &mut String) {
+    // the function can mutate the value it borrows
 
     // references are immutable, so this will throw an error
     s.push_str(", world");
-
-    s.len()
-    // s goes out of scope. It's a reference so it doesn't have ownership of
-    // the value, and nothing happens
 }
