@@ -8,6 +8,10 @@ fn main() {
 
 fn calculate_length(s: &String) -> usize {
     // s is a reference to a String (its "structure" not the actual value)
+
+    // references are immutable, so this will throw an error
+    s.push_str(", world");
+
     s.len()
     // s goes out of scope. It's a reference so it doesn't have ownership of
     // the value, and nothing happens
