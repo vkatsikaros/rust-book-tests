@@ -1,26 +1,5 @@
-struct User {
-    active: bool,
-    username: String,
-    email: String,
-    sign_in_count: u64,
-}
+struct Color(i32, i32, i32);
 
 fn main() {
-    let u1 = build_user( String::from("alice@example.com"), String::from("Alice") );
-    println!("{}", u1.username);
-
-    let u2 = User {
-        email: String::from("alice+foo@example.com"),
-        ..u1
-    };
-    println!("{}", u2.email);
-}
-
-fn build_user(email: String, username: String) -> User {
-    User {
-        active: true,
-        username,
-        email,
-        sign_in_count: 1,
-    }
+    let c1 = Color(0, 0, 0);
 }
