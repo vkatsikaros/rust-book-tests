@@ -8,6 +8,12 @@ struct User {
 fn main() {
     let u1 = build_user( String::from("alice@example.com"), String::from("Alice") );
     println!("{}", u1.username);
+
+    let u2 = User {
+        email: String::from("alice+foo@example.com"),
+        ..u1
+    };
+    println!("{}", u2.email);
 }
 
 fn build_user(email: String, username: String) -> User {
