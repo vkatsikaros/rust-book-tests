@@ -9,10 +9,10 @@ fn main() {
         height: 10,
     };
 
-    let area = area(r1);
+    let area = area(&r1);
     println!("Area {}", area);
 }
 
-fn area(r: Rectangle) -> u32 {
+fn area(r: &Rectangle) -> u32 {
     r.width * r.height
 }
