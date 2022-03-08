@@ -1,5 +1,5 @@
-struct Color(i32, i32, i32);
+struct SomeConditionFoo;
 
 fn main() {
-    let c1 = Color(0, 0, 0);
+    let a = SomeConditionFoo;
 }
