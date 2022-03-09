@@ -5,8 +5,9 @@ struct Rectangle {
 }
 
 fn main() {
+    let i = 3;
     let r1 = Rectangle {
-        width: 50,
+        width: dbg!(50 * i),
         height: 10,
     };
 
