@@ -11,7 +11,7 @@ fn main() {
     };
 
     let area = area(&r1);
-    println!("rect: {:#?}", r1);
+    dbg!(&r1);
 }
 
 fn area(r: &Rectangle) -> u32 {
