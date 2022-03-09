@@ -10,7 +10,7 @@ fn main() {
     };
 
     let area = area(&r1);
-    println!("Area {}", area);
+    println!("rect: {}", r1);
 }
 
 fn area(r: &Rectangle) -> u32 {
