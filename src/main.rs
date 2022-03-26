@@ -1,3 +1,5 @@
 fn main() {
-    let v = vec![1, 2, 3];
+    let mut v = Vec::new();
+
+    v.push(5);
 }
