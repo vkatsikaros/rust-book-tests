@@ -32,5 +32,6 @@ fn main() {
     // So... s6 is not valid afterwards
     println!("{}", fb);
 
-    let fb2 = format!("{} {}", s6, s6); // s6 is not valid
+    let s8 = format!("{}-{}-{}-{}-{}", ar, s2, s3, s4, s5);
+    println!("{}", s8);
 }
