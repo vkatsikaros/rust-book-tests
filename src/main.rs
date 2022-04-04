@@ -34,4 +34,12 @@ fn main() {
 
     let s8 = format!("{}-{}-{}-{}-{}", ar, s2, s3, s4, s5);
     println!("{}", s8);
+
+    // hindi word: नमस्ते
+    // bytes: [224, 164, 168, 224, 164, 174, 224, 164, 184, 224, 165, 141, 224, 164, 164, 224, 165, 135]
+    // grapheme clusters/letters ['न', 'म', 'स', '्', 'त', 'े']
+    let hi = String::from("नमस्ते");
+    println!("{}", hi);
+    let h=hi[0];
+    println!("{}", h);
 }
