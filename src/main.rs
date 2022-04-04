@@ -1,15 +1,24 @@
 fn main() {
-    let v1 = vec![1, 2, 3, 4, 5];
-    let mut v2 = vec![6, 7, 8, 9, 10];
+    let s1 = String::new();
+    println!("{}", s1);
 
-    // loop over immutable references
-    for i in &v1 {
-        println!("{}", i);
-    }
+    let s2 = String::from("helloooooo");
+    println!("{}", s2);
 
-    // loop over mutable references
-    for i in &mut v2 {
-        *i += 10;
-        println!("{}", i);
-    }
+    let data = "hello!";
+    let s3 = data.to_string();
+    println!("{}", s3);
+
+    let s4 = "hello???".to_string();
+    println!("{}", s4);
+
+    let ar = String::from("السلام عليكم");
+    println!("{}", ar);
+
+    let gr = String::from("Καλημέεεεεεερα");
+    println!("{}", gr);
+
+    let mut s5 = String::from("foo");
+    s5.push_str("bar");
+    println!("{}", s5);
 }
