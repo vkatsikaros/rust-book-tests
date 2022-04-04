@@ -40,6 +40,16 @@ fn main() {
     // grapheme clusters/letters ['न', 'म', 'स', '्', 'त', 'े']
     let hi = String::from("नमस्ते");
     println!("{}", hi);
-    let h=hi[0];
-    println!("{}", h);
+
+    // https://doc.rust-lang.org/std/string/struct.String.html#method.chars
+    println!("Print characters");
+    for c in hi.chars() {
+        println!("{}", c);
+    }
+
+    // https://doc.rust-lang.org/std/string/struct.String.html#method.bytes
+    println!("Print bytes");
+    for c in hi.bytes() {
+        println!("{}", c);
+    }
 }
